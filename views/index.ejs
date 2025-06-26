@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/new" method="get">
+        <button type="submit">Write new message</button>
+    </form>
+    <ul>
+      <% messages.forEach((message) => { %>
+        <li>
+          <strong><%= message.user %>:</strong> 
+
+          <%= message.text %> 
+
+          <em>(<%= message.added.toLocaleString() %>)</em>
+          
+          <form action="/message/<%= message.id %>" method="get" style="display: inline;">
+            <button type="submit">View</button>
+          </form>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

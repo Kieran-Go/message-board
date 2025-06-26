@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Message Board - New</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <h1>New Message</h1>
+    <form method="POST" action="/new">
+      <fieldset>
+        <legend>Post a Message</legend>
+
+        <label for="messageUser">Name:</label><br>
+        <input type="text" id="messageUser" name="messageUser" required><br><br>
+
+        <label for="messageText">Message:</label><br>
+        <textarea id="messageText" name="messageText" rows="5" cols="40" required style="resize: both;"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
